@@ -66,6 +66,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+
             <!-- Docker maven plugin -->
             <plugin>
                 <groupId>com.spotify</groupId>
@@ -73,6 +74,8 @@
                 <version>1.2.0</version>
                 <configuration>
                     <imageName>${docker.image.prefix}/${project.artifactId}</imageName>
+
+                    <!--docker-plugin支持将dockerfile内容放在pom里，但是推荐放在外部dockerfile中,利于分开管理-->
                     <dockerDirectory>.</dockerDirectory>
                     <resources>
                         <resource>

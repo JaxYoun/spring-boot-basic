@@ -3,4 +3,4 @@
 2. logback ok
 3. test ok
 4. security
-6. docker
+6. docker ok
