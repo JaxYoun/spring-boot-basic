@@ -6,8 +6,9 @@ public class AsyncConfig {
     private static final MAX_SIZE  = 16;
     private static final Integer QUEUE_CAPACITY = 128;
     private static final Integer KEEP_ALIVE_SECOND = 360;
-    private static final String THREAD_PREFIX = "my_async_"; 
+    private static final String THREAD_PREFIX = "my_log_pool_"; 
     
+    @Bean("logPool")
     public ThreadPoolTaskExecutor AsyncThreadPoolTaskExecutor() {
       ThreadPoolTaskExecutor pool = new ThreadPoolTaskExecutor();
       
